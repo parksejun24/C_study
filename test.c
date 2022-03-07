@@ -1,26 +1,18 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
+//int main(){
+//	int a=6, b=4;
+//	float c = a/b;
+//	printf("%f",c); 
+//} 자료형 int 연산에서는 몫이 실수여도 피연산자가 모두 정수면 값은 정수로 나온다. 
+// ex 6/4는 1.5지만 피연산자가 모두 정수기 때문에 1로 나온다. 따라서 1.5가 나오고 싶으면 피연산자중 적어도 하나는 실수여야 한다.
 
-typedef struct {
-	char name[20];
-	int age;
-	char address[100];
-}Person;
-
-void idPrint(Person *man){
-	printf("%s, %d, %s", man->name, man->age, man->address);
+int main(){
+int a=3;
+	{
+		int a=4;
+		printf("%d",a);
+	}
+printf("%d",a);	
 }
+//자신의 괄호범위 안에서만 영향을 끼치는 block scope기 때문에 첫번째 printf는 4 두번째  printf는 3이 나온다. 
 
-int main(){	
-	Person p1;
-	strcpy(p1.name, "박세준");
-	p1.age = 20;
-	strcpy(p1.address,"경기도 양주시 가마골로 40-8");
-	idPrint(&p1);
-}
-// 
-// p1->age;    화살표 연산자로 멤버에 접근
-// (*p1).age;  구조체 포인터를 역참조한 뒤 .으로 멤버에 접근
-// 두개가 같은 의미임 즉 구조체 포인터를 사용할때는 ->를 사용해야 한다. 포인터를 역참조 해야 하기 때문에.  
