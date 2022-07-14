@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+/*
 int main(){
     int length=0;
     int maxmin[2] = {0,};
@@ -20,4 +21,9 @@ int main(){
         }
     }
     printf("%d %d",maxmin[1], maxmin[0]);	
+}
+*/
+
+int main(){
+           
 }
